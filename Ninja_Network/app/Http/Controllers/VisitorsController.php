@@ -9,9 +9,8 @@ class VisitorsController extends Controller
 {
     public function display()
     {
-        // Retrieve all visitors from the database
-        $visitors = Visitors::active()->get();
-        // Pass the visitors to the view using compact
+        $visitors = Visitors::all();
+        
         return view('display', compact('visitors'));
     }
 }
